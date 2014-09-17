@@ -1,0 +1,538 @@
+TTwitterApp
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/Info.plist TwitterApp/TwitterApp-Info.plist
+cProcessPCH /var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch.pth TwitterApp/TwitterApp-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/main.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/FirstViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/SecondViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/TwitterApp normal i386
+cGenerateDSYMFile /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app.dSYM /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/TwitterApp
+cCopyStringsFile /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/en.lproj/InfoPlist.strings TwitterApp/en.lproj/InfoPlist.strings
+cCpResource TwitterApp/Default.png build/Debug-iphonesimulator/TwitterApp.app/Default.png
+cCpResource TwitterApp/Default@2x.png build/Debug-iphonesimulator/TwitterApp.app/Default@2x.png
+cCpResource TwitterApp/Default-568h@2x.png build/Debug-iphonesimulator/TwitterApp.app/Default-568h@2x.png
+cCompileStoryboard /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/../en.lproj/MainStoryboard.storyboard
+cCpResource TwitterApp/Resources/images/first.png build/Debug-iphonesimulator/TwitterApp.app/first.png
+cCpResource TwitterApp/Resources/images/first@2x.png build/Debug-iphonesimulator/TwitterApp.app/first@2x.png
+cCpResource TwitterApp/Resources/images/second.png build/Debug-iphonesimulator/TwitterApp.app/second.png
+cCpResource TwitterApp/Resources/images/second@2x.png build/Debug-iphonesimulator/TwitterApp.app/second@2x.png
+cTouch /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
+c0000000050EDEAFB0000000000000110
+t1357769467
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000005173E3E20000000000228FE0
+t1366549474
+s2265056
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000005173E3E500000000003DDFA0
+t1366549477
+s4054944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000005173E3E400000000000015F7
+t1366549476
+s5623
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Social.framework/Social
+c000000005173E3EB00000000000E7990
+t1366549483
+s948624
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000005173E3EB0000000000000E8D
+t1366549483
+s3725
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000005173E3EF0000000000AB6230
+t1366549487
+s11231792
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/usr/include/Availability.h
+c000000005173E4080000000000001B73
+t1366549512
+s7027
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/AppDelegate.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/AppDelegate.m
+c000000005419C058000000000000079E
+t1410973784
+s1950
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/FirstViewController.m
+c000000005419C05800000000000001C8
+t1410973784
+s456
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/SecondViewController.m
+c000000005419C05800000000000001CC
+t1410973784
+s460
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Default-568h@2x.png
+c00000000515C9E6200000000000048A2
+t1365024354
+s18594
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Default.png
+c00000000515C9E62000000000000198C
+t1365024354
+s6540
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Default@2x.png
+c00000000515C9E620000000000003EEB
+t1365024354
+s16107
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/FirstViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/../en.lproj/MainStoryboard.storyboard
+c000000005419C0580000000000002600
+t1410973784
+s9728
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/images/first.png
+c00000000515C9E6200000000000000FD
+t1365024354
+s253
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/images/first@2x.png
+c00000000515C9E620000000000000192
+t1365024354
+s402
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/images/second.png
+c00000000515C9E620000000000000080
+t1365024354
+s128
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/images/second@2x.png
+c00000000515C9E620000000000000082
+t1365024354
+s130
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/SecondViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/TwitterApp-Prefix.pch
+c000000005419C0580000000000000143
+t1410973784
+s323
+i<Availability.h>
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/en.lproj/InfoPlist.strings
+c000000005419C058000000000000002D
+t1410973784
+s45
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/en.lproj/MainStoryboard.storyboard
+c000000005419C0580000000000002600
+t1410973784
+s9728
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/first.png
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/first@2x.png
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/main.m
+c000000005419C0580000000000000117
+t1410973784
+s279
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/second.png
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/second@2x.png
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app.dSYM
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/Default-568h@2x.png
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/Default.png
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/Default@2x.png
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/Info.plist
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/PkgInfo
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/TwitterApp
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/en.lproj/MainStoryboard.storyboardc
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/first.png
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/first@2x.png
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/second.png
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/second@2x.png
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate-88EA005F8122B26F.o
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate-ACAB055A34057E66.o
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate.o
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController-7A8410812D0BE282.o
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController-8EB08202F9E5BE6A.o
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController.o
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController-7FB340575CD5DE6C.o
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController-EC4EA739BF12F373.o
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController.o
+t2
+s0
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/TwitterApp.LinkFileList
+c000000005419C43A000000000000023A
+t1410974778
+s570
+
+N/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch.pth
+t2
+s0
+
+NTwitterApp/TwitterApp-Info.plist
+c000000005419C0580000000000000594
+t1410973784
+s1428
+
+CBuild AST from /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/AppDelegate.m
+r0
+
+CBuild AST from /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/AppDelegate.m
+r0
+
+CBuild AST from /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/FirstViewController.m
+r0
+
+CBuild AST from /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/SecondViewController.m
+r0
+
+CBuild AST from /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/FirstViewController.m
+r0
+
+CBuild AST from /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/SecondViewController.m
+r0
+
+CBuild AST from /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies552f9fbafbc9b941^1fdac7bafbc9b941^---0#1#0#--18"Check dependencies36"293D2E97-333A-48A8-8DF5-1BF6E5F20274-
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate-88EA005F8122B26F.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate-ACAB055A34057E66.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s432667580.648786
+e432667581.329949
+r1
+xCompileC
+xbuild/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate.o
+x/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/AppDelegate.m484ea6bcfbc9b941^f67d54bdfbc9b941^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/AppDelegate.m0000000000000000^3598"CompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate.o TwitterApp/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-generated-files.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-own-target-headers.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-all-target-headers.hmap -iquote /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-project-headers.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/DerivedSources/i386 -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/DerivedSources -F/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator -include /var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate.dia -c /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/AppDelegate.m -o /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/AppDelegate.o36"D2E34085-BE17-4274-ABE2-A58493C53CC4-
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController-7A8410812D0BE282.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/FirstViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController-8EB08202F9E5BE6A.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/FirstViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/FirstViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s432667581.331077
+e432667581.467616
+r1
+xCompileC
+xbuild/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController.o
+x/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/FirstViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/FirstViewController.m85ec54bdfbc9b941^bccd77bdfbc9b941^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/FirstViewController.m0000000000000000^3678"CompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController.o TwitterApp/Classes/ViewControllers/FirstViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-generated-files.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-own-target-headers.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-all-target-headers.hmap -iquote /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-project-headers.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/DerivedSources/i386 -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/DerivedSources -F/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator -include /var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController.d --serialize-diagnostics /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController.dia -c /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/FirstViewController.m -o /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController.o36"A3DF8944-0156-4AA7-AD5B-3BEDE2FB41B9-
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/FirstViewController.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/FirstViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController-7FB340575CD5DE6C.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/SecondViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController-EC4EA739BF12F373.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/SecondViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/SecondViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s432667581.331632
+e432667581.469552
+r1
+xCompileC
+xbuild/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController.o
+x/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/SecondViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/SecondViewController.me10d55bdfbc9b941^533e78bdfbc9b941^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/SecondViewController.m0000000000000000^3684"CompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController.o TwitterApp/Classes/ViewControllers/SecondViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-generated-files.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-own-target-headers.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-all-target-headers.hmap -iquote /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-project-headers.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/DerivedSources/i386 -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/DerivedSources -F/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator -include /var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController.d --serialize-diagnostics /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController.dia -c /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Classes/ViewControllers/SecondViewController.m -o /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController.o36"384CDF56-70BA-4B5E-9C92-4209D9A14675-
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/SecondViewController.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/SecondViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/main.o /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s432667580.647635
+e432667581.329613
+r1
+xCompileC
+xbuild/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/main.o
+x/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/main.m6809a6bcfbc9b941^b47554bdfbc9b941^---0#0#0#-19%DVTDocumentLocation2@77"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/main.m0000000000000000^3540"CompileC build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/main.o TwitterApp/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-generated-files.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-own-target-headers.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-all-target-headers.hmap -iquote /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-project-headers.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/DerivedSources/i386 -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/DerivedSources -F/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator -include /var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch -MMD -MT dependencies -MF /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/main.dia -c /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/main.m -o /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/main.o36"0A256161-FC4D-410D-A151-435D0CB9215E-
+
+CCompileStoryboard /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/../en.lproj/MainStoryboard.storyboard
+s432667582.516995
+e432667587.162197
+r1
+xCompileStoryboard
+x/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/../en.lproj/MainStoryboard.storyboard
+o2014-09-17 20:26:24.419 Interface Builder Cocoa Touch Tool[45483:14603] CFPreferences: user home directory at file://localhost/Users/admin/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"CompileStoryboard TwitterApp/Resources/../en.lproj/MainStoryboard.storyboardea7884befbc9b941^448629c3fbc9b941^-240"2014-09-17 20:26:24.419 Interface Builder Cocoa Touch Tool[45483:14603] CFPreferences: user home directory at file://localhost/Users/admin/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/../en.lproj/MainStoryboard.storyboard0000000000000000^994"CompileStoryboard TwitterApp/Resources/../en.lproj/MainStoryboard.storyboard    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 6.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/en.lproj/MainStoryboard.storyboardc /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/../en.lproj/MainStoryboard.storyboard --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk36"A3EACAEE-1E6A-4696-BE59-60EE396233AD-
+
+CCompileStoryboard /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/en.lproj/MainStoryboard.storyboard
+r0
+
+CCopyStringsFile /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/en.lproj/InfoPlist.strings TwitterApp/en.lproj/InfoPlist.strings
+s432667582.487883
+e432667582.516285
+r1
+xCopyStringsFile
+x/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/en.lproj/InfoPlist.strings
+xTwitterApp/en.lproj/InfoPlist.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy TwitterApp/en.lproj/InfoPlist.strings944d7dbefbc9b941^7b2d84befbc9b941^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/en.lproj/InfoPlist.strings0000000000000000^597"CopyStringsFile build/Debug-iphonesimulator/TwitterApp.app/en.lproj/InfoPlist.strings TwitterApp/en.lproj/InfoPlist.strings    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/en.lproj -- TwitterApp/en.lproj/InfoPlist.strings36"6082E78E-3272-4FA7-9425-DE904EBB829A-
+
+CCpResource TwitterApp/Default-568h@2x.png build/Debug-iphonesimulator/TwitterApp.app/Default-568h@2x.png
+s432667582.510677
+e432667582.515655
+r1
+xCpResource
+xTwitterApp/Default-568h@2x.png
+xbuild/Debug-iphonesimulator/TwitterApp.app/Default-568h@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug-iphonesimulator/TwitterApp.app/Default-568h@2x.png9dd582befbc9b941^670f84befbc9b941^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/Default-568h@2x.png000000000080d041^631"CpResource "TwitterApp/Default-568h@2x.png" "build/Debug-iphonesimulator/TwitterApp.app/Default-568h@2x.png"    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Default-568h@2x.png" /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app36"FED80E65-B7F2-4F7C-B082-764ED6BA99FD-
+
+CCpResource TwitterApp/Default.png build/Debug-iphonesimulator/TwitterApp.app/Default.png
+s432667582.489686
+e432667582.503953
+r1
+xCpResource
+xTwitterApp/Default.png
+xbuild/Debug-iphonesimulator/TwitterApp.app/Default.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Copy build/Debug-iphonesimulator/TwitterApp.app/Default.png4b757dbefbc9b941^b40481befbc9b941^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/Default.png000000000080d041^601"CpResource TwitterApp/Default.png build/Debug-iphonesimulator/TwitterApp.app/Default.png    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Default.png /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app36"238BA1E7-3D9C-401A-AA03-5B0794A71486-
+
+CCpResource TwitterApp/Default@2x.png build/Debug-iphonesimulator/TwitterApp.app/Default@2x.png
+s432667582.505346
+e432667582.509233
+r1
+xCpResource
+xTwitterApp/Default@2x.png
+xbuild/Debug-iphonesimulator/TwitterApp.app/Default@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/Debug-iphonesimulator/TwitterApp.app/Default@2x.png897a81befbc9b941^9e5d82befbc9b941^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/Default@2x.png000000000080d041^616"CpResource "TwitterApp/Default@2x.png" "build/Debug-iphonesimulator/TwitterApp.app/Default@2x.png"    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Default@2x.png" /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app36"B419AF55-C894-473D-939E-311ABF90689B-
+
+CCpResource TwitterApp/Resources/images/first.png build/Debug-iphonesimulator/TwitterApp.app/first.png
+s432667582.517684
+e432667582.521355
+r1
+xCpResource
+xTwitterApp/Resources/images/first.png
+xbuild/Debug-iphonesimulator/TwitterApp.app/first.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy build/Debug-iphonesimulator/TwitterApp.app/first.pnga69b84befbc9b941^0a8485befbc9b941^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/first.png000000000080d041^629"CpResource TwitterApp/Resources/images/first.png build/Debug-iphonesimulator/TwitterApp.app/first.png    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/images/first.png /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app36"ED3E539B-D305-4800-9718-F93AC1014832-
+
+CCpResource TwitterApp/Resources/images/first@2x.png build/Debug-iphonesimulator/TwitterApp.app/first@2x.png
+s432667582.522677
+e432667582.525637
+r1
+xCpResource
+xTwitterApp/Resources/images/first@2x.png
+xbuild/Debug-iphonesimulator/TwitterApp.app/first@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy build/Debug-iphonesimulator/TwitterApp.app/first@2x.png21e785befbc9b941^089386befbc9b941^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/first@2x.png000000000080d041^644"CpResource "TwitterApp/Resources/images/first@2x.png" "build/Debug-iphonesimulator/TwitterApp.app/first@2x.png"    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/images/first@2x.png" /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app36"B600FBF5-41FE-4B4D-9B19-D4DC99BA3955-
+
+CCpResource TwitterApp/Resources/images/second.png build/Debug-iphonesimulator/TwitterApp.app/second.png
+s432667582.526959
+e432667582.530061
+r1
+xCpResource
+xTwitterApp/Resources/images/second.png
+xbuild/Debug-iphonesimulator/TwitterApp.app/second.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy build/Debug-iphonesimulator/TwitterApp.app/second.pngef0087befbc9b941^44c287befbc9b941^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/second.png000000000080d041^632"CpResource TwitterApp/Resources/images/second.png build/Debug-iphonesimulator/TwitterApp.app/second.png    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/images/second.png /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app36"7587D434-4C88-4A5A-8EB1-6C6EF28841BD-
+
+CCpResource TwitterApp/Resources/images/second@2x.png build/Debug-iphonesimulator/TwitterApp.app/second@2x.png
+s432667582.531412
+e432667582.534579
+r1
+xCpResource
+xTwitterApp/Resources/images/second@2x.png
+xbuild/Debug-iphonesimulator/TwitterApp.app/second@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy build/Debug-iphonesimulator/TwitterApp.app/second@2x.png742788befbc9b941^7ff988befbc9b941^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/second@2x.png000000000080d041^647"CpResource "TwitterApp/Resources/images/second@2x.png" "build/Debug-iphonesimulator/TwitterApp.app/second@2x.png"    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/Resources/images/second@2x.png" /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app36"53ACF942-DC0F-4197-91CB-E0287C506311-
+
+CCpResource TwitterApp/first.png build/Debug-iphonesimulator/TwitterApp.app/first.png
+r0
+
+CCpResource TwitterApp/first@2x.png build/Debug-iphonesimulator/TwitterApp.app/first@2x.png
+r0
+
+CCpResource TwitterApp/second.png build/Debug-iphonesimulator/TwitterApp.app/second.png
+r0
+
+CCpResource TwitterApp/second@2x.png build/Debug-iphonesimulator/TwitterApp.app/second@2x.png
+r0
+
+CGenerateDSYMFile /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app.dSYM /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/TwitterApp
+s432667582.364404
+e432667582.450749
+r1
+xGenerateDSYMFile
+x/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app.dSYM
+x/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/TwitterApp
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Generate /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app.dSYM51685dbefbc9b941^066473befbc9b941^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app.dSYM000000000080d041^658"GenerateDSYMFile build/Debug-iphonesimulator/TwitterApp.app.dSYM build/Debug-iphonesimulator/TwitterApp.app/TwitterApp    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/TwitterApp -o /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app.dSYM36"3D1C437A-A536-4517-B67B-47F16F1E44AE-
+
+CLd /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/TwitterApp normal i386
+s432667581.477282
+e432667582.356630
+r1
+xLd
+x/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/TwitterApp
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Link /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/TwitterApp11577abdfbc9b941^d34c5bbefbc9b941^---0#0#0#--1211"Ld build/Debug-iphonesimulator/TwitterApp.app/TwitterApp normal i386    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv IPHONEOS_DEPLOYMENT_TARGET 6.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator -F/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator -filelist /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/Objects-normal/i386/TwitterApp.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=6.1 -framework Social -framework UIKit -framework Foundation -framework CoreGraphics -o /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/TwitterApp36"9ECC27CF-6A96-4B23-BB38-343C19382F95-
+
+CProcessInfoPlistFile /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/Info.plist TwitterApp/TwitterApp-Info.plist
+s432667578.887183
+e432667578.898752
+r1
+xProcessInfoPlistFile
+x/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/Info.plist
+xTwitterApp/TwitterApp-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Process TwitterApp/TwitterApp-Info.plistf12de4bafbc9b941^8715e6bafbc9b941^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/TwitterApp-Info.plist0000000000000000^686"ProcessInfoPlistFile build/Debug-iphonesimulator/TwitterApp.app/Info.plist TwitterApp/TwitterApp-Info.plist    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility TwitterApp/TwitterApp-Info.plist -genpkginfo /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app/Info.plist36"23C21120-0C66-43DE-987F-ACE4B3452E16-
+
+CProcessPCH /Users/admin/Documents/iOS_progs/TwitterApp/DerivedData/TwitterApp/Index/PrecompiledHeaders/TwitterApp-Prefix-gwpzfspcaajzlmbjjniebksyrcoz_ast/TwitterApp-Prefix.pch.pth TwitterApp/TwitterApp-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch.pth TwitterApp/TwitterApp-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s432667578.907071
+e432667580.640621
+r1
+xProcessPCH
+x/var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch.pth
+xTwitterApp/TwitterApp-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile TwitterApp/TwitterApp-Prefix.pch124decbafbc9b941^3bfea3bcfbc9b941^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/TwitterApp-Prefix.pch0000000000000000^3583"ProcessPCH /var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch.pth TwitterApp/TwitterApp-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-generated-files.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-own-target-headers.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-all-target-headers.hmap -iquote /Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/TwitterApp-project-headers.hmap -I/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/DerivedSources/i386 -I/Users/admin/Documents/iOS_progs/TwitterApp/build/TwitterApp.build/Debug-iphonesimulator/TwitterApp.build/DerivedSources -F/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator --serialize-diagnostics /var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch.dia -c /Users/admin/Documents/iOS_progs/TwitterApp/TwitterApp/TwitterApp-Prefix.pch -o /var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/vk/fx0gr1fs2v91c023795k_61m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/TwitterApp-Prefix-csbnofelwmqikpajcfvudzdegzih/TwitterApp-Prefix.pch.d36"F459CD2F-81C7-4187-B70B-E0B27A8ECEE0-
+
+CTouch /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app
+s432667587.173153
+e432667587.231477
+r1
+xTouch
+x/Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Touch /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app00742cc3fbc9b941^425e3bc3fbc9b941^---0#0#0#--404"Touch build/Debug-iphonesimulator/TwitterApp.app    cd /Users/admin/Documents/iOS_progs/TwitterApp    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/admin/Documents/iOS_progs/TwitterApp/build/Debug-iphonesimulator/TwitterApp.app36"C056AFCB-DEF7-4AF7-ADE2-BE627BC8B739-
+
