@@ -26,6 +26,7 @@
 		846F97A219C9FE6E0070EC44 /* NewTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F97A119C9FE6E0070EC44 /* NewTweetViewController.m */; };
 		846F97A519C9FF0A0070EC44 /* LoginModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F97A419C9FF0A0070EC44 /* LoginModalViewController.m */; };
 		846F97A719CA208B0070EC44 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846F97A619CA208A0070EC44 /* Accounts.framework */; };
+		A86158C019CAD1D9002CAE14 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86158BF19CAD1D9002CAE14 /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		846F97A319C9FF0A0070EC44 /* LoginModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModalViewController.h; sourceTree = "<group>"; };
 		846F97A419C9FF0A0070EC44 /* LoginModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModalViewController.m; sourceTree = "<group>"; };
 		846F97A619CA208A0070EC44 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		A86158BF19CAD1D9002CAE14 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86158C019CAD1D9002CAE14 /* Twitter.framework in Frameworks */,
 				846F97A719CA208B0070EC44 /* Accounts.framework in Frameworks */,
 				846F978319C9FA700070EC44 /* Social.framework in Frameworks */,
 				846F975419C9F7D80070EC44 /* UIKit.framework in Frameworks */,
@@ -93,6 +96,7 @@
 		846F975219C9F7D80070EC44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A86158BF19CAD1D9002CAE14 /* Twitter.framework */,
 				846F97A619CA208A0070EC44 /* Accounts.framework */,
 				846F978219C9FA700070EC44 /* Social.framework */,
 				846F975319C9F7D80070EC44 /* UIKit.framework */,
@@ -390,6 +394,7 @@
 				846F978019C9F7D80070EC44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
