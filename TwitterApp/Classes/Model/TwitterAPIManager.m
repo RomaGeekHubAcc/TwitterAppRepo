@@ -9,23 +9,23 @@
 
 #import "STTwitter.h"
 
-#import "TwitterAccountManager.h"
+#import "TwitterAPIManager.h"
 
 
-@interface TwitterAccountManager ()
+@interface TwitterAPIManager ()
 
 @property (nonatomic, strong) STTwitterAPI *twitter;
 
 @end
 
-@implementation TwitterAccountManager
+@implementation TwitterAPIManager
 
 
 +(instancetype) sharedInstance {
-    static TwitterAccountManager *manager = nil;
+    static TwitterAPIManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [TwitterAccountManager new];
+        manager = [TwitterAPIManager new];
     });
     
     return manager;
@@ -33,8 +33,17 @@
 
 #pragma mark - Interface Methods
 
--(void) loginWithIOSAccount {
+-(void) authorizeWithIOSAccountCompletion:(RequestCallback)completion {
+    self.twitter = [STTwitterAPI twitterAPIOSWithFirstAccount];
     
+    [self.twitter verifyCredentialsWithSuccessBlock:^(NSString *username) {
+        self.userName = username;
+        completion(YES, username);
+        $l(@"\n\n----loginWith_iOS_account success !! \nUserName = %@", username);
+        
+    } errorBlock:^(NSError *error) {
+        $l(@"\n\n Error in loginWith_iOS_account -> %@",error);
+    }];
 }
 
 //-(BOOL) verifyCredentials {

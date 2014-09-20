@@ -6,7 +6,7 @@
 //
 //
 
-
+#import "TwitterAPIManager.h"
 
 #import "LoginModalViewController.h"
 
@@ -39,9 +39,21 @@
 #pragma mark - Action methods
 
 - (IBAction)signIn:(id)sender {
+    $l("----sign in button pressed");
 }
 
 - (IBAction)signInWith_iOS:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.view animated:NO];
+    __weak typeof(self) weakSelf = self;
+    
+    [[TwitterAPIManager sharedInstance] authorizeWithIOSAccountCompletion:^(BOOL success, id responce) {
+        if (success) {
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            $l("\n\n----responce = %@", responce);
+            [weakSelf dismissViewControllerAnimated:YES
+                                         completion:NULL];
+        }
+    }];
 }
 
 
