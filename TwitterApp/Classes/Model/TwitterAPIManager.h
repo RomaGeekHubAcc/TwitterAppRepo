@@ -21,4 +21,6 @@ typedef void (^RequestCallback) (BOOL success, id responce);
 
 -(void) authorizeWithIOSAccountCompletion:(RequestCallback)completion;
 
+-(void) getHomeTimelineSinceId:(NSString *)sinceId count:(NSUInteger)count completionBlock:(RequestCallback)complition;
+
 @end

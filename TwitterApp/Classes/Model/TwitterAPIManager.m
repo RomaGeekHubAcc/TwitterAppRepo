@@ -42,19 +42,24 @@
         $l(@"\n\n----loginWith_iOS_account success !! \nUserName = %@", username);
         
     } errorBlock:^(NSError *error) {
+        completion(NO, error);
         $l(@"\n\n Error in loginWith_iOS_account -> %@",error);
     }];
 }
 
-//-(BOOL) verifyCredentials {
-//    [self.twitter verifyCredentialsWithSuccessBlock:^(NSString *userName){
-//        NSLog(@"\n\n-----verifyCredentialsWithSuccess----");
-//        //        [self getUserTweets];
-//        
-//    }errorBlock:^(NSError *error) {
-//        NSLog(@"\n\n---Error -> %@", error);
-//    }];
-//    retu
-//}
+-(void) getHomeTimelineSinceId:(NSString *)sinceId count:(NSUInteger)count completionBlock:(RequestCallback)complition {
+    [self.twitter getHomeTimelineSinceID:sinceId
+                              count:20
+                       successBlock:^(NSArray *statuses) {
+                           
+                           complition(YES, statuses);
+                           
+                       } errorBlock:^(NSError *error) {
+                           complition(NO, error);
+                           $l(@"getHomeTimelineSinceID error - > %@", error);
+                       }];
+}
+
+
 
 @end

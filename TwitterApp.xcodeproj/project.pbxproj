@@ -44,6 +44,8 @@
 		A89EB8B919CDAA6F00FD7DB4 /* BAVPlistNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A89EB8AA19CDAA6F00FD7DB4 /* BAVPlistNode.m */; };
 		A89EB8BA19CDAA6F00FD7DB4 /* JSONSyntaxHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = A89EB8AC19CDAA6F00FD7DB4 /* JSONSyntaxHighlight.m */; };
 		A89EB8BB19CDAA6F00FD7DB4 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A89EB8AE19CDAA6F00FD7DB4 /* STHTTPRequest.m */; };
+		A89EB8BF19CDBFC600FD7DB4 /* TweetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A89EB8BE19CDBFC600FD7DB4 /* TweetTableViewCell.m */; };
+		A89EB91919CDD07E00FD7DB4 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89EB91819CDD07E00FD7DB4 /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +114,9 @@
 		A89EB8AC19CDAA6F00FD7DB4 /* JSONSyntaxHighlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONSyntaxHighlight.m; sourceTree = "<group>"; };
 		A89EB8AD19CDAA6F00FD7DB4 /* STHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHTTPRequest.h; sourceTree = "<group>"; };
 		A89EB8AE19CDAA6F00FD7DB4 /* STHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHTTPRequest.m; sourceTree = "<group>"; };
+		A89EB8BD19CDBFC600FD7DB4 /* TweetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetTableViewCell.h; sourceTree = "<group>"; };
+		A89EB8BE19CDBFC600FD7DB4 /* TweetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetTableViewCell.m; sourceTree = "<group>"; };
+		A89EB91819CDD07E00FD7DB4 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A89EB91919CDD07E00FD7DB4 /* ImageIO.framework in Frameworks */,
 				A86158C019CAD1D9002CAE14 /* Twitter.framework in Frameworks */,
 				846F97A719CA208B0070EC44 /* Accounts.framework in Frameworks */,
 				846F978319C9FA700070EC44 /* Social.framework in Frameworks */,
@@ -151,6 +157,7 @@
 		846F975219C9F7D80070EC44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A89EB91819CDD07E00FD7DB4 /* ImageIO.framework */,
 				A86158BF19CAD1D9002CAE14 /* Twitter.framework */,
 				846F97A619CA208A0070EC44 /* Accounts.framework */,
 				846F978219C9FA700070EC44 /* Social.framework */,
@@ -242,6 +249,8 @@
 		846F979819C9FB700070EC44 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A89EB8BD19CDBFC600FD7DB4 /* TweetTableViewCell.h */,
+				A89EB8BE19CDBFC600FD7DB4 /* TweetTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -422,6 +431,7 @@
 				A89EB8B619CDAA6F00FD7DB4 /* STTwitterOAuth.m in Sources */,
 				846F97A219C9FE6E0070EC44 /* NewTweetViewController.m in Sources */,
 				A871248919CDA41600EE4833 /* MDUtils.m in Sources */,
+				A89EB8BF19CDBFC600FD7DB4 /* TweetTableViewCell.m in Sources */,
 				A87124A119CDA97700EE4833 /* MBProgressHUD.m in Sources */,
 				A89EB8B919CDAA6F00FD7DB4 /* BAVPlistNode.m in Sources */,
 				A89EB8BA19CDAA6F00FD7DB4 /* JSONSyntaxHighlight.m in Sources */,
@@ -517,6 +527,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TwitterApp/TwitterApp-Prefix.pch";
 				INFOPLIST_FILE = "TwitterApp/TwitterApp-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -528,6 +539,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TwitterApp/TwitterApp-Prefix.pch";
 				INFOPLIST_FILE = "TwitterApp/TwitterApp-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

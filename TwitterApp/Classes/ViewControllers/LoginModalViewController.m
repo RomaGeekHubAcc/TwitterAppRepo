@@ -53,6 +53,9 @@
             [weakSelf dismissViewControllerAnimated:YES
                                          completion:NULL];
         }
+        else {
+            $l("\n\n--->Показати алерт про те, що настройок не знайдено");
+        }
     }];
 }
 
