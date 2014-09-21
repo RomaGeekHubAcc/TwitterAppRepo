@@ -10,9 +10,6 @@
 // http://www.ikangai.com/software/writing-a-simple-twitter-iphone-client/
 
 
-
-
-
 #import "TwitterAPIManager.h"
 #import "LoginModalViewController.h"
 #import "TweetTableViewCell.h"
@@ -80,7 +77,7 @@
     }
     NSDictionary *tweet = self.tweetItems[indexPath.row];
     
-//    cell.senderNameLaber.text = 
+//    cell.senderNameLaber.text = tweet[@"screen_name"];
 //    NSDictionary *user = tweet[@"user"];
     
     cell.tweetTextLabel.text = tweet[@"text"];

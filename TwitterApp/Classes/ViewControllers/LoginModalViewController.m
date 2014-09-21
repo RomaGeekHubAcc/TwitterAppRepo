@@ -47,13 +47,14 @@
     __weak typeof(self) weakSelf = self;
     
     [[TwitterAPIManager sharedInstance] authorizeWithIOSAccountCompletion:^(BOOL success, id responce) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         if (success) {
-            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
             $l("\n\n----responce = %@", responce);
             [weakSelf dismissViewControllerAnimated:YES
                                          completion:NULL];
         }
         else {
+            [self showAlertViewNotFindAccount];
             $l("\n\n--->Показати алерт про те, що настройок не знайдено");
         }
     }];
@@ -73,6 +74,14 @@
         [textField resignFirstResponder];
     }
     return YES;
+}
+
+
+#pragma mark - Private methods
+
+-(void) showAlertViewNotFindAccount {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Нема Акаунта!" message:@"Потрібно зайти в Settings і авторизуватись!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 

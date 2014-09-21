@@ -46,6 +46,7 @@
 		A89EB8BB19CDAA6F00FD7DB4 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A89EB8AE19CDAA6F00FD7DB4 /* STHTTPRequest.m */; };
 		A89EB8BF19CDBFC600FD7DB4 /* TweetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A89EB8BE19CDBFC600FD7DB4 /* TweetTableViewCell.m */; };
 		A89EB91919CDD07E00FD7DB4 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89EB91819CDD07E00FD7DB4 /* ImageIO.framework */; };
+		A89EB91B19CEF82900FD7DB4 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89EB91A19CEF82900FD7DB4 /* SDWebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		A89EB8BD19CDBFC600FD7DB4 /* TweetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetTableViewCell.h; sourceTree = "<group>"; };
 		A89EB8BE19CDBFC600FD7DB4 /* TweetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetTableViewCell.m; sourceTree = "<group>"; };
 		A89EB91819CDD07E00FD7DB4 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A89EB91A19CEF82900FD7DB4 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = TwitterApp/Classes/Externals/SDWebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A89EB91B19CEF82900FD7DB4 /* SDWebImage.framework in Frameworks */,
 				A89EB91919CDD07E00FD7DB4 /* ImageIO.framework in Frameworks */,
 				A86158C019CAD1D9002CAE14 /* Twitter.framework in Frameworks */,
 				846F97A719CA208B0070EC44 /* Accounts.framework in Frameworks */,
@@ -157,6 +160,7 @@
 		846F975219C9F7D80070EC44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A89EB91A19CEF82900FD7DB4 /* SDWebImage.framework */,
 				A89EB91819CDD07E00FD7DB4 /* ImageIO.framework */,
 				A86158BF19CAD1D9002CAE14 /* Twitter.framework */,
 				846F97A619CA208A0070EC44 /* Accounts.framework */,
@@ -524,6 +528,10 @@
 		846F977F19C9F7D80070EC44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwitterApp/Classes/Externals",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TwitterApp/TwitterApp-Prefix.pch";
 				INFOPLIST_FILE = "TwitterApp/TwitterApp-Info.plist";
@@ -536,6 +544,10 @@
 		846F978019C9F7D80070EC44 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwitterApp/Classes/Externals",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TwitterApp/TwitterApp-Prefix.pch";
 				INFOPLIST_FILE = "TwitterApp/TwitterApp-Info.plist";
