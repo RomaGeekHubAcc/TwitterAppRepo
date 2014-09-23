@@ -21,6 +21,7 @@ typedef void (^CompletionBlock) (BOOL success, id responce, NSError *error);
 
 -(void) authorizeWithIOSAccountCompletion:(CompletionBlock)completion;
 -(void) authrizeWithWebBrowserWithComlition:(CompletionBlock)completion;
+-(void) onlyAutentificationWithCompletion:(CompletionBlock)completion;
 
 -(void) sendOauthVerifier:(NSString *)verifier complition:(CompletionBlock)complition;
 

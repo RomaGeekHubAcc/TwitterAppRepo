@@ -33,6 +33,23 @@
 
 #pragma mark - Interface Methods
 
+-(void) onlyAutentificationWithCompletion:(CompletionBlock)completion {
+    NSString *consumerName = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_CONSUMER_NAME];
+    NSString *consumerKey = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_CONSUMER_KEY];
+    NSString *consumerSecret = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_CONSUMER_SECRET];
+    
+    self.twitter = [STTwitterAPI twitterAPIAppOnlyWithConsumerName:consumerName
+                                                       consumerKey:consumerKey
+                                                    consumerSecret:consumerSecret];
+    [self.twitter verifyCredentialsWithSuccessBlock:^(NSString *username) {
+        
+        completion(YES, username, nil);
+        
+    } errorBlock:^(NSError *error) {
+        completion(NO, nil, error);
+    }];
+}
+
 -(void) authorizeWithIOSAccountCompletion:(CompletionBlock)completion {
     self.twitter = [STTwitterAPI twitterAPIOSWithFirstAccount];
     
@@ -73,7 +90,7 @@
     [self.twitter postAccessTokenRequestWithPIN:verifier
                                    successBlock:^(NSString *oauthToken, NSString *oauthTokenSecret, NSString *userID, NSString *screenName) {
                                        
-                                       $l("\n\n--oauthToken = %@\n--oauthTokenSecret = %@\n--userID = %@\n0--screenName = %@", oauthToken, oauthTokenSecret, userID, screenName);
+                                       $l("\n\n--oauthToken = %@\n--oauthTokenSecret = %@\n--userID = %@\n--screenName = %@", oauthToken, oauthTokenSecret, userID, screenName);
                                        
                                        self.userName = screenName;
                                        
