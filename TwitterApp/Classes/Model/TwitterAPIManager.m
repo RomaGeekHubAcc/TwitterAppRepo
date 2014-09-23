@@ -33,32 +33,80 @@
 
 #pragma mark - Interface Methods
 
--(void) authorizeWithIOSAccountCompletion:(RequestCallback)completion {
+-(void) authorizeWithIOSAccountCompletion:(CompletionBlock)completion {
     self.twitter = [STTwitterAPI twitterAPIOSWithFirstAccount];
     
     [self.twitter verifyCredentialsWithSuccessBlock:^(NSString *username) {
         self.userName = username;
-        completion(YES, username);
+        completion(YES, username, nil);
         $l(@"\n\n----loginWith_iOS_account success !! \nUserName = %@", username);
         
     } errorBlock:^(NSError *error) {
-        completion(NO, error);
-        $l(@"\n\n Error in loginWith_iOS_account -> %@",error);
+        completion(NO, nil, error);
+        $l(@"\n\n Error in loginWith_iOS_account -> %@", error);
     }];
 }
 
--(void) getHomeTimelineSinceId:(NSString *)sinceId count:(NSUInteger)count completionBlock:(RequestCallback)complition {
+-(void) authrizeWithWebBrowserWithComlition:(CompletionBlock)completion {
+    self.twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:@"fh0vKkpAWTcDoTSAzEMwU9J9j"
+                                            consumerSecret:@"hArOwdWqXkykDBdLLbJ8iTw23Z5AXSEh0VBHBS2vgPcFSWoSSo"];
+    
+    [self.twitter postTokenRequest:^(NSURL *url, NSString *oauthToken) {
+        
+        $l(@"-- url: %@", url);
+        $l(@"-- oauthToken: %@", oauthToken);
+        
+        
+        completion(YES, url, nil);
+        
+    } authenticateInsteadOfAuthorize:NO
+                   forceLogin:@(YES)
+                   screenName:nil
+                oauthCallback:@"myappRR://twitter_access_tokens/"
+                   errorBlock:^(NSError *error) {
+                       completion(NO, nil, error);
+                       NSLog(@"-- error: %@", error);
+                   }];
+}
+
+-(void) sendOauthVerifier:(NSString *)verifier complition:(CompletionBlock)complition {
+    [self.twitter postAccessTokenRequestWithPIN:verifier
+                                   successBlock:^(NSString *oauthToken, NSString *oauthTokenSecret, NSString *userID, NSString *screenName) {
+                                       
+                                       $l("\n\n--oauthToken = %@\n--oauthTokenSecret = %@\n--userID = %@\n0--screenName = %@", oauthToken, oauthTokenSecret, userID, screenName);
+                                       
+                                       self.userName = screenName;
+                                       
+                                       [[NSUserDefaults standardUserDefaults] setObject:oauthToken
+                                                                                 forKey:TWITTER_API_OAUTH_TOKEN];
+                                       [[NSUserDefaults standardUserDefaults] setObject:oauthTokenSecret
+                                                                                 forKey:TWITTER_API_OAUTH_SECRET];
+                                       [[NSUserDefaults standardUserDefaults] synchronize];
+                                       
+                                       complition(YES, nil, nil);
+                                       
+                                   }   errorBlock:^(NSError *error) {
+                                       complition(NO, nil, error);
+                                   }];
+}
+
+
+
+-(void) getHomeTimelineSinceId:(NSString *)sinceId count:(NSUInteger)count completionBlock:(CompletionBlock)complition {
     [self.twitter getHomeTimelineSinceID:sinceId
                               count:20
                        successBlock:^(NSArray *statuses) {
                            
-                           complition(YES, statuses);
+                           complition(YES, statuses, nil);
                            
                        } errorBlock:^(NSError *error) {
-                           complition(NO, error);
+                           complition(NO, nil, error);
                            $l(@"getHomeTimelineSinceID error - > %@", error);
                        }];
 }
+
+#pragma mark - Private methods
+
 
 
 

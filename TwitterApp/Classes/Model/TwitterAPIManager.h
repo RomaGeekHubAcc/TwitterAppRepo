@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^RequestCallback) (BOOL success, id responce);
+typedef void (^CompletionBlock) (BOOL success, id responce, NSError *error);
 
 @interface TwitterAPIManager : NSObject
 
@@ -19,8 +19,11 @@ typedef void (^RequestCallback) (BOOL success, id responce);
 
 +(instancetype) sharedInstance;
 
--(void) authorizeWithIOSAccountCompletion:(RequestCallback)completion;
+-(void) authorizeWithIOSAccountCompletion:(CompletionBlock)completion;
+-(void) authrizeWithWebBrowserWithComlition:(CompletionBlock)completion;
 
--(void) getHomeTimelineSinceId:(NSString *)sinceId count:(NSUInteger)count completionBlock:(RequestCallback)complition;
+-(void) sendOauthVerifier:(NSString *)verifier complition:(CompletionBlock)complition;
+
+-(void) getHomeTimelineSinceId:(NSString *)sinceId count:(NSUInteger)count completionBlock:(CompletionBlock)complition;
 
 @end

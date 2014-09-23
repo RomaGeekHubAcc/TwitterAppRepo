@@ -42,13 +42,16 @@
         [self presentLoginViewControllerForNavigationController:self.navigationController
                                                        animated:YES];
     }
-    
+    self.title = [TwitterAPIManager sharedInstance].userName;
     [[TwitterAPIManager sharedInstance] getHomeTimelineSinceId:nil
                                                          count:100
-                                               completionBlock:^(BOOL success, id responce){
+                                               completionBlock:^(BOOL success, id responce, NSError *error){
                                                    if (success) {
                                                        self.tweetItems = [NSMutableArray arrayWithArray:responce];
                                                        [self.tableView reloadData];
+                                                   }
+                                                   else {
+                                                       $l("Error - %@", error);
                                                    }
                                                }];
 }

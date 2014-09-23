@@ -10,29 +10,29 @@
 	<string>TwitterApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7EDE7DC2-C82F-4EA0-B51E-709130CC9847</key>
+		<key>1319160485510AF1639EA610F89CC6DCCA002438</key>
 		<string>ssh://github.com/RomaGeekHubAcc/TwitterAppRepo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TwitterApp.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>7EDE7DC2-C82F-4EA0-B51E-709130CC9847</key>
+		<key>1319160485510AF1639EA610F89CC6DCCA002438</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/RomaGeekHubAcc/TwitterAppRepo.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7EDE7DC2-C82F-4EA0-B51E-709130CC9847</string>
+	<string>1319160485510AF1639EA610F89CC6DCCA002438</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7EDE7DC2-C82F-4EA0-B51E-709130CC9847</string>
+			<string>1319160485510AF1639EA610F89CC6DCCA002438</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TwitterApp</string>
 		</dict>
