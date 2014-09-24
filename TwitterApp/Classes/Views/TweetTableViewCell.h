@@ -6,12 +6,13 @@
 //
 //
 
-#import <UIKit/UIKit.h>
 
 @interface TweetTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *senderNameLaber;
 @property (weak, nonatomic) IBOutlet UILabel *tweetTextLabel;
+
+-(void) setContentWithDicctionary:(NSDictionary *)dict;
 
 @end

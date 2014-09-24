@@ -19,9 +19,9 @@
 #define TWITTER_API_OAUTH_TOKEN @"twitterApiOautToken"
 #define TWITTER_API_OAUTH_SECRET @"twitterApiOautSecret"
 
+#define TWITTER_USER_NAME @"consumerName"
 
 #define TWITTER_APP_NAME @"RRTestTwitterApplication"
 
 #define TWITTER_CONSUMER_KEY @"fh0vKkpAWTcDoTSAzEMwU9J9j"
 #define TWITTER_CONSUMER_SECRET @"hArOwdWqXkykDBdLLbJ8iTw23Z5AXSEh0VBHBS2vgPcFSWoSSo"
-#define TWITTER_CONSUMER_NAME @"consumerName"

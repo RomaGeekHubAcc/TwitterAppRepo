@@ -11,10 +11,8 @@
 #import "LoginModalViewController.h"
 
 
-@interface LoginModalViewController () <UITextFieldDelegate, UIWebViewDelegate>
+@interface LoginModalViewController () <UIWebViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *loginTF;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTF;
 
 - (IBAction)signIn:(id)sender;
 - (IBAction)signInWith_iOS:(id)sender;
@@ -25,16 +23,9 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-	
-    self.loginTF.delegate = self;
-    self.passwordTF.delegate = self;
-    self.passwordTF.secureTextEntry = YES;
-}
 
--(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES];
-    [super touchesBegan:touches withEvent:event];
 }
+#error прибрати поки що авторизацію з ios
 
 #pragma mark - Action methods
 
@@ -71,22 +62,6 @@
             $l("\n\n--->Показати алерт про те, що настройок не знайдено");
         }
     }];
-}
-
-
-#pragma mark - UITextFieldDelegate
-
--(BOOL) textFieldShouldBeginEditing:(UITextField *)textField {
-    return YES;
-}
-
--(BOOL) textFieldShouldReturn:(UITextField *)textField {
-    if (textField.tag == 0) {
-        [_passwordTF becomeFirstResponder];
-    } else {
-        [textField resignFirstResponder];
-    }
-    return YES;
 }
 
 

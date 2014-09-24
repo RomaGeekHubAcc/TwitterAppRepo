@@ -16,12 +16,15 @@ typedef void (^CompletionBlock) (BOOL success, id responce, NSError *error);
 @interface TwitterAPIManager : NSObject
 
 @property (nonatomic, strong) NSString *userName;
+@property (nonatomic, assign) BOOL isAuthorized;
 
 +(instancetype) sharedInstance;
 
 -(void) authorizeWithIOSAccountCompletion:(CompletionBlock)completion;
 -(void) authrizeWithWebBrowserWithComlition:(CompletionBlock)completion;
 -(void) onlyAutentificationWithCompletion:(CompletionBlock)completion;
+
+-(void) deleteUserData;
 
 -(void) sendOauthVerifier:(NSString *)verifier complition:(CompletionBlock)complition;
 

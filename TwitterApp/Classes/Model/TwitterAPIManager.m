@@ -26,23 +26,23 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [TwitterAPIManager new];
+        manager.userName = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_USER_NAME];
     });
     
     return manager;
 }
 
+
 #pragma mark - Interface Methods
 
 -(void) onlyAutentificationWithCompletion:(CompletionBlock)completion {
-    NSString *consumerName = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_CONSUMER_NAME];
-    NSString *consumerKey = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_CONSUMER_KEY];
-    NSString *consumerSecret = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_CONSUMER_SECRET];
+    NSString *oauthToken = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_API_OAUTH_TOKEN];
+    NSString *oauthSecret = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_API_OAUTH_SECRET];;
     
-    self.twitter = [STTwitterAPI twitterAPIAppOnlyWithConsumerName:consumerName
-                                                       consumerKey:consumerKey
-                                                    consumerSecret:consumerSecret];
+    self.twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:TWITTER_CONSUMER_KEY consumerSecret:TWITTER_CONSUMER_SECRET oauthToken:oauthToken oauthTokenSecret:oauthSecret];
+    
     [self.twitter verifyCredentialsWithSuccessBlock:^(NSString *username) {
-        
+        self.isAuthorized = YES;
         completion(YES, username, nil);
         
     } errorBlock:^(NSError *error) {
@@ -55,6 +55,7 @@
     
     [self.twitter verifyCredentialsWithSuccessBlock:^(NSString *username) {
         self.userName = username;
+        self.isAuthorized = YES;
         completion(YES, username, nil);
         $l(@"\n\n----loginWith_iOS_account success !! \nUserName = %@", username);
         
@@ -65,8 +66,8 @@
 }
 
 -(void) authrizeWithWebBrowserWithComlition:(CompletionBlock)completion {
-    self.twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:@"fh0vKkpAWTcDoTSAzEMwU9J9j"
-                                            consumerSecret:@"hArOwdWqXkykDBdLLbJ8iTw23Z5AXSEh0VBHBS2vgPcFSWoSSo"];
+    self.twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:TWITTER_CONSUMER_KEY
+                                                 consumerSecret:TWITTER_CONSUMER_SECRET];
     
     [self.twitter postTokenRequest:^(NSURL *url, NSString *oauthToken) {
         
@@ -94,6 +95,7 @@
                                        
                                        self.userName = screenName;
                                        
+                                       [[NSUserDefaults standardUserDefaults] setObject:screenName forKey:TWITTER_USER_NAME];
                                        [[NSUserDefaults standardUserDefaults] setObject:oauthToken
                                                                                  forKey:TWITTER_API_OAUTH_TOKEN];
                                        [[NSUserDefaults standardUserDefaults] setObject:oauthTokenSecret
@@ -122,9 +124,12 @@
                        }];
 }
 
-#pragma mark - Private methods
-
-
+-(void) deleteUserData {
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_USER_NAME];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_API_OAUTH_TOKEN];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_API_OAUTH_SECRET];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 
 @end
