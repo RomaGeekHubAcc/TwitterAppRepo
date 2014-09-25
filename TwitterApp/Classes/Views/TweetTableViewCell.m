@@ -45,7 +45,7 @@ static NSString * const profileNameKey = @"name";
 -(void) setContentWithDicctionary:(NSDictionary *)dict {
     NSDictionary *user = dict[userKey];
     
-    $l("user = %@", user);
+//    $l("user = %@", user);
     NSString *profileImageUrlStr = user[profileUrlKey];
     [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:profileImageUrlStr]
                             placeholderImage:[UIImage imageNamed:@"placeholder_icon"]];

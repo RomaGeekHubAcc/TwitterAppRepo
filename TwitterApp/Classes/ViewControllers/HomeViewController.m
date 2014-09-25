@@ -8,18 +8,18 @@
 
 
 #import "TwitterAPIManager.h"
-#import "LoginModalViewController.h"
 #import "TweetTableViewCell.h"
 
 #import "HomeViewController.h"
 
 
-@interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface HomeViewController () <UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *tweetItems;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *logoutOutlet;
 
-- (IBAction)logOut:(id)sender;
+- (IBAction)loginLogout:(id)sender;
 
 @end
 
@@ -32,38 +32,69 @@
 	
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    
+#warning перевірка інет-з"єднання..
+    NSString *verifier = [[NSUserDefaults standardUserDefaults] objectForKey:TWITTER_API_OAUTH_SECRET];
+    if (verifier) {
+        [[TwitterAPIManager sharedInstance] onlyAutentificationWithCompletion:^(BOOL success, id responce, NSError *error) {
+            if (success) {
+                [TwitterAPIManager sharedInstance].isAuthorized = YES;
+                [TwitterAPIManager sharedInstance].userName = (NSString *)responce;
+#warning задавати тайтл for UIBarButtonItem
+                self.logoutOutlet.title = @"Log Out";
+            }
+        }];
+    } else {
+        [self.logoutOutlet setTitle:@""];
+        [self loginLogout:nil];
+    }
+    
 }
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    NSString *userName = [[NSUserDefaults standardUserDefaults] objectForKey:TWITTER_USER_NAME];
-    
-    if (!userName && ![TwitterAPIManager sharedInstance].userName) {
-        [self presentLoginViewControllerForNavigationController:self.navigationController
-                                                       animated:YES];
-    }
-    if (![TwitterAPIManager sharedInstance].isAuthorized) {
-        [self oauth];
-    }
-    
+#warning цьому методу тут не місце
+//    [self getHomeTimeline];
 }
 
 
 #pragma mark - Private methods
 
--(void) oauth {
-    [[TwitterAPIManager sharedInstance] onlyAutentificationWithCompletion:^(BOOL success, id responce, NSError *error) {
+//-(void) oauth {
+//    [[TwitterAPIManager sharedInstance] onlyAutentificationWithCompletion:^(BOOL success, id responce, NSError *error) {
+//        if (success) {
+//            [self getHomeTimeline];
+//            self.logoutOutlet.title = @"Log Out";
+//        }
+//        else {
+//            $l("---oauth error -> %@", [error localizedDescription]);
+//        }
+//    }];
+//}
+
+-(void) loginWithWebBrowser {
+    [MBProgressHUD showHUDAddedTo:self.view animated:NO];
+    [[TwitterAPIManager sharedInstance] authrizeWithWebBrowserWithComlition:^(BOOL success, id responce, NSError *error) {
+        
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         if (success) {
-            [self getHomeTimeline];
+            NSURL *url = (NSURL *)responce;
+            if (url) {
+                [self openWebViewWithUrl:url];
+            }
+            
+        } else {
+            $l("--loginWithWebBrowser Error - %@", error);
         }
     }];
 }
 
 -(void) getHomeTimeline {
+    [MBProgressHUD showHUDAddedTo:self.view animated:NO];
     [[TwitterAPIManager sharedInstance] getHomeTimelineSinceId:nil
-                                                         count:100
+                                                         count:TWEETS_COUNT
                                                completionBlock:^(BOOL success, id responce, NSError *error){
+                                                   [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
                                                    if (success) {
                                                        self.tweetItems = [NSMutableArray arrayWithArray:responce];
                                                        [self.tableView reloadData];
@@ -74,10 +105,37 @@
                                                }];
 }
 
--(void) presentLoginViewControllerForNavigationController:(UINavigationController*)navigationController animated:(BOOL)animated {
-    LoginModalViewController *loginModalVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginModalViewController"];
-    loginModalVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [navigationController presentViewController:loginModalVC animated:animated completion:nil];
+- (NSDictionary *)parametersDictionaryFromQueryString:(NSString *)queryString {
+    
+    NSMutableDictionary *md = [NSMutableDictionary dictionary];
+    
+    NSArray *queryComponents = [queryString componentsSeparatedByString:@"&"];
+    
+    for(NSString *s in queryComponents) {
+        NSArray *pair = [s componentsSeparatedByString:@"="];
+        if([pair count] != 2) continue;
+        
+        NSString *key = pair[0];
+        NSString *value = pair[1];
+        
+        md[key] = value;
+    }
+    
+    return md;
+}
+
+//-(void) presentLoginViewControllerForNavigationController:(UINavigationController*)navigationController animated:(BOOL)animated {
+//    LoginModalViewController *loginModalVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginModalViewController"];
+//    loginModalVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+//    [navigationController presentViewController:loginModalVC animated:animated completion:nil];
+//}
+
+-(void) openWebViewWithUrl:(NSURL *)url {
+    UIWebView *browser = [[UIWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [browser loadRequest:request];
+    browser.delegate = self;
+    [self.view addSubview:browser];
 }
 
 
@@ -100,15 +158,45 @@
     return cell;
 }
 
+#pragma mark - Delegated methods - UIWebViewDelegate
+
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    
+    NSURL *url = [request URL];
+    NSString *urlScheme = [url scheme];
+    $l(@"Loading URL: %@", [url absoluteString]);
+    
+    if ([urlScheme isEqualToString:@"myapprr"]) {
+        [webView removeFromSuperview];
+        
+        NSDictionary *d = [self parametersDictionaryFromQueryString:[url query]];
+        NSString *verifier = d[@"oauth_verifier"];
+        
+        [[TwitterAPIManager sharedInstance] sendOauthVerifier:verifier
+                                                   complition:^(BOOL success, id responce, NSError *error) {
+                                                       if (success) {
+                                                           [self getHomeTimeline];
+                                                       } else {
+                                                           $l("Error - %@", error);
+                                                       }
+                                                   }];
+    }
+    return YES;
+}
+
 
 #pragma mark - Action methods
 
-- (IBAction)logOut:(id)sender {
-    self.tweetItems = nil;
-    [self.tableView reloadData];
-    [[TwitterAPIManager sharedInstance] deleteUserData];
-    [self presentLoginViewControllerForNavigationController:self.navigationController
-                                                   animated:YES];
+- (IBAction)loginLogout:(id)sender {
+    if ([TwitterAPIManager sharedInstance].isAuthorized) {
+        self.tweetItems = nil;
+        [self.tableView reloadData];
+        [self.logoutOutlet setTitle:@"Log In"];
+        [[TwitterAPIManager sharedInstance] finishTwitterSession];
+    } else {
+        [self loginWithWebBrowser];
+    }
+    
 }
 
 

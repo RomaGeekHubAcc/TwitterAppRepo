@@ -24,7 +24,7 @@ typedef void (^CompletionBlock) (BOOL success, id responce, NSError *error);
 -(void) authrizeWithWebBrowserWithComlition:(CompletionBlock)completion;
 -(void) onlyAutentificationWithCompletion:(CompletionBlock)completion;
 
--(void) deleteUserData;
+-(void) finishTwitterSession;
 
 -(void) sendOauthVerifier:(NSString *)verifier complition:(CompletionBlock)complition;
 

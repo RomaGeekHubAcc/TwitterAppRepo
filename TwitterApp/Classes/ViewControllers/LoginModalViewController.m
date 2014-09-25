@@ -25,7 +25,7 @@
     [super viewDidLoad];
 
 }
-#error прибрати поки що авторизацію з ios
+
 
 #pragma mark - Action methods
 

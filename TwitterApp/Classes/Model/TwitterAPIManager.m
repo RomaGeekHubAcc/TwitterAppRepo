@@ -113,7 +113,7 @@
 
 -(void) getHomeTimelineSinceId:(NSString *)sinceId count:(NSUInteger)count completionBlock:(CompletionBlock)complition {
     [self.twitter getHomeTimelineSinceID:sinceId
-                              count:20
+                              count:count
                        successBlock:^(NSArray *statuses) {
                            
                            complition(YES, statuses, nil);
@@ -124,11 +124,14 @@
                        }];
 }
 
--(void) deleteUserData {
+-(void) finishTwitterSession {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_USER_NAME];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_API_OAUTH_TOKEN];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_API_OAUTH_SECRET];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    self.twitter = nil;
+    self.userName = nil;
+    self.isAuthorized = NO;
 }
 
 
