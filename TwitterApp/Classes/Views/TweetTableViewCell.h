@@ -7,6 +7,9 @@
 //
 
 
+
+#define TWEET_TABLE_VIEW_CELL_HEIGHT 86.0f
+
 @interface TweetTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;

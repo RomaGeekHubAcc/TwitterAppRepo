@@ -7,15 +7,10 @@
 //
 
 
-#import "STTwitter.h"
-
 #import "TwitterAPIManager.h"
 
 
 @interface TwitterAPIManager ()
-
-@property (nonatomic, strong) STTwitterAPI *twitter;
-
 
 @end
 
@@ -27,7 +22,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [TwitterAPIManager new];
-        manager.userName = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_USER_NAME];
+        manager.userName = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_USER_NAME_KEY];
     });
     
     return manager;
@@ -35,6 +30,38 @@
 
 
 #pragma mark - Interface Methods
+
+-(void) getUserTimelineWithScreenName:(NSString *)userName completionBlock:(CompletionBlock)completion {
+    [[TwitterAPIManager sharedInstance].twitter verifyCredentialsWithSuccessBlock:^(NSString *userName) {
+        
+        if (userName) {
+            [[TwitterAPIManager sharedInstance].twitter getUserTimelineWithScreenName:userName
+                                                                         successBlock:^(NSArray *statuses){
+                                                                             self.userName = userName;
+                                                                             completion(YES, statuses, nil);
+                                                                         } errorBlock:^(NSError *error){
+                                                                             completion(NO, nil, error);
+                                                                             $l("----- getUserTimeline error -> %@", error.debugDescription);
+                                                                         }];
+        }
+        
+    } errorBlock:^(NSError *error) {
+        $l("--- verifyCredentials error -> %@", error.debugDescription);
+    }];
+}
+
+-(void) getHomeTimelineSinceId:(NSString *)sinceId count:(NSUInteger)count completionBlock:(CompletionBlock)complition {
+    [self.twitter getHomeTimelineSinceID:sinceId
+                                   count:count
+                            successBlock:^(NSArray *statuses) {
+                                
+                                complition(YES, statuses, nil);
+                                
+                            } errorBlock:^(NSError *error) {
+                                complition(NO, nil, error);
+                                $l(@"getHomeTimelineSinceID error - > %@", error);
+                            }];
+}
 
 -(void) onlyAutentificationWithCompletion:(CompletionBlock)completion {
     
@@ -44,6 +71,7 @@
     self.twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:TWITTER_CONSUMER_KEY consumerSecret:TWITTER_CONSUMER_SECRET oauthToken:oauthToken oauthTokenSecret:oauthSecret];
     
     [self.twitter verifyCredentialsWithSuccessBlock:^(NSString *username) {
+        self.userName = username;
         self.isAuthorized = YES;
         completion(YES, username, nil);
         
@@ -97,7 +125,7 @@
                                        
                                        self.userName = screenName;
                                        
-                                       [[NSUserDefaults standardUserDefaults] setObject:screenName forKey:TWITTER_USER_NAME];
+                                       [[NSUserDefaults standardUserDefaults] setObject:screenName forKey:TWITTER_USER_NAME_KEY];
                                        [[NSUserDefaults standardUserDefaults] setObject:oauthToken
                                                                                  forKey:TWITTER_API_OAUTH_TOKEN_KEY];
                                        [[NSUserDefaults standardUserDefaults] setObject:oauthTokenSecret
@@ -112,21 +140,23 @@
 }
 
 
--(void) getHomeTimelineSinceId:(NSString *)sinceId count:(NSUInteger)count completionBlock:(CompletionBlock)complition {
-    [self.twitter getHomeTimelineSinceID:sinceId
-                              count:count
-                       successBlock:^(NSArray *statuses) {
-                           
-                           complition(YES, statuses, nil);
-                           
-                       } errorBlock:^(NSError *error) {
-                           complition(NO, nil, error);
-                           $l(@"getHomeTimelineSinceID error - > %@", error);
-                       }];
+-(void) sendTweet:(NSString *)tweetMessage withCompletionBlock:(CompletionBlock)complition {
+    [self.twitter postStatusUpdate:tweetMessage
+                 inReplyToStatusID:nil
+                          latitude:nil
+                         longitude:nil
+                           placeID:nil
+                displayCoordinates:nil
+                          trimUser:nil
+                      successBlock:^(NSDictionary *satusses) {
+                          //
+                      } errorBlock:^(NSError *error) {
+                          
+                      }];
 }
 
 -(void) finishTwitterSession {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_USER_NAME];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_USER_NAME_KEY];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_API_OAUTH_TOKEN_KEY];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_API_OAUTH_SECRET_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];

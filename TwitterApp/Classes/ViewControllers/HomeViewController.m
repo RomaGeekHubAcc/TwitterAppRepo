@@ -126,12 +126,6 @@
     return md;
 }
 
-//-(void) presentLoginViewControllerForNavigationController:(UINavigationController*)navigationController animated:(BOOL)animated {
-//    LoginModalViewController *loginModalVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginModalViewController"];
-//    loginModalVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-//    [navigationController presentViewController:loginModalVC animated:animated completion:nil];
-//}
-
 -(void) openWebViewWithUrl:(NSURL *)url {
     UIWebView *browser = [[UIWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];

@@ -20,7 +20,7 @@
 #define TWITTER_API_OAUTH_TOKEN_KEY @"twitterApiOautToken"
 #define TWITTER_API_OAUTH_SECRET_KEY @"twitterApiOautSecret"
 
-#define TWITTER_USER_NAME @"consumerName"
+#define TWITTER_USER_NAME_KEY @"consumerName"
 
 #define TWITTER_APP_NAME @"RRTestTwitterApplication"
 

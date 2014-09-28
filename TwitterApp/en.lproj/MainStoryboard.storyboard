@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <development version="5100" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -135,25 +134,17 @@
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--New Tweet View Controller-->
+        <!--Send Tweet-->
         <scene sceneID="KzU-8u-fbK">
             <objects>
                 <viewController storyboardIdentifier="NewTweetViewController" id="hKq-4T-Avp" customClass="NewTweetViewController" sceneMemberID="viewController">
-                    <view key="view" alpha="0.39999999999999963" contentMode="scaleToFill" id="YDE-CB-FiA">
+                    <view key="view" contentMode="scaleToFill" id="YDE-CB-FiA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Dej-j1-2HK">
-                                <rect key="frame" x="0.0" y="424" width="320" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NmX-FT-Ycl">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="422"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="432"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetTableViewCell" rowHeight="86" id="0gH-N6-qZY" customClass="TweetTableViewCell">
@@ -190,12 +181,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="New message" id="IY4-of-cV6">
+                                <rect key="frame" x="0.0" y="433.99999776482565" width="320" height="84"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.67101470289999998" green="0.96733652420000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Bn7-jj-R1P"/>
+                    <navigationItem key="navigationItem" title="Send Tweet" id="Bn7-jj-R1P">
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="zbL-Hy-ZU3">
+                            <connections>
+                                <action selector="send:" destination="hKq-4T-Avp" id="lWc-0V-tBS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="messageTextView" destination="Dej-j1-2HK" id="Srp-0j-P5n"/>
+                        <outlet property="messageTextView" destination="IY4-of-cV6" id="dx2-tI-5sz"/>
                         <outlet property="tableView" destination="NmX-FT-Ycl" id="9YH-2d-jem"/>
                     </connections>
                 </viewController>
