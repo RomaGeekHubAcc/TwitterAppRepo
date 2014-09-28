@@ -26,6 +26,7 @@
 		A8507D2919D71F1A0033BEEA /* home_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8507D2519D71F1A0033BEEA /* home_icon@2x.png */; };
 		A8507D2A19D71F1A0033BEEA /* new_tweet_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A8507D2619D71F1A0033BEEA /* new_tweet_icon.png */; };
 		A8507D2B19D71F1A0033BEEA /* new_tweet_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8507D2719D71F1A0033BEEA /* new_tweet_icon@2x.png */; };
+		A8507D2D19D80CE60033BEEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8507D2C19D80CE60033BEEA /* Images.xcassets */; };
 		A86158C019CAD1D9002CAE14 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86158BF19CAD1D9002CAE14 /* Twitter.framework */; };
 		A871246119CDA16900EE4833 /* TwitterAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A871246019CDA16900EE4833 /* TwitterAPIManager.m */; };
 		A871248819CDA41600EE4833 /* MDDebugObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A871246619CDA41600EE4833 /* MDDebugObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -102,6 +103,7 @@
 		A8507D2519D71F1A0033BEEA /* home_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_icon@2x.png"; sourceTree = "<group>"; };
 		A8507D2619D71F1A0033BEEA /* new_tweet_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_tweet_icon.png; sourceTree = "<group>"; };
 		A8507D2719D71F1A0033BEEA /* new_tweet_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_tweet_icon@2x.png"; sourceTree = "<group>"; };
+		A8507D2C19D80CE60033BEEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A86158BF19CAD1D9002CAE14 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		A871245F19CDA16900EE4833 /* TwitterAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterAPIManager.h; sourceTree = "<group>"; };
 		A871246019CDA16900EE4833 /* TwitterAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterAPIManager.m; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			children = (
 				846F978F19C9FB700070EC44 /* Classes */,
 				846F978519C9FB5B0070EC44 /* Resources */,
+				A8507D2C19D80CE60033BEEA /* Images.xcassets */,
 				846F975A19C9F7D80070EC44 /* Supporting Files */,
 			);
 			path = TwitterApp;
@@ -488,6 +491,7 @@
 				846F976D19C9F7D80070EC44 /* MainStoryboard.storyboard in Resources */,
 				A8CEE78219D3324800803BF3 /* placeholder_icon@2x.png in Resources */,
 				A8507D2B19D71F1A0033BEEA /* new_tweet_icon@2x.png in Resources */,
+				A8507D2D19D80CE60033BEEA /* Images.xcassets in Resources */,
 				A8CEE78119D3324800803BF3 /* placeholder_icon.png in Resources */,
 				A8507D2A19D71F1A0033BEEA /* new_tweet_icon.png in Resources */,
 			);
@@ -608,6 +612,8 @@
 		846F977F19C9F7D80070EC44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TwitterApp/Classes/Externals",
@@ -635,6 +641,8 @@
 		846F978019C9F7D80070EC44 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TwitterApp/Classes/Externals",

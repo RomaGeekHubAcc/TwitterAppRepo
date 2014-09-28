@@ -17,9 +17,9 @@
 
 @property (nonatomic, strong) NSMutableArray *tweetItems;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *logoutOutlet;
+@property (weak, nonatomic) IBOutlet UIButton *logoutOutlet;
 
-- (IBAction)loginLogout:(id)sender;
+-(IBAction) loginLogout:(id)sender;
 
 @end
 
@@ -33,7 +33,7 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    self.logoutOutlet.title = @"Log In";
+    [self.logoutOutlet setTitle:@"Log In" forState:UIControlStateNormal];
     
 #warning перевірка інет-з"єднання..
     NSString *verifier = [[NSUserDefaults standardUserDefaults] objectForKey:TWITTER_API_OAUTH_SECRET_KEY];
@@ -43,12 +43,12 @@
                 [TwitterAPIManager sharedInstance].isAuthorized = YES;
                 [TwitterAPIManager sharedInstance].userName = (NSString *)responce;
 #warning задавати тайтл for UIBarButtonItem
-                self.logoutOutlet.title = @"Log Out";
+                [self.logoutOutlet setTitle:@"Log Out" forState:UIControlStateNormal];
                 [self getHomeTimeline];
             }
         }];
     } else {
-        [self.logoutOutlet setTitle:@""];
+        [self.logoutOutlet setTitle:@"Log In" forState:UIControlStateNormal];
         [self loginLogout:nil];
     }
     
@@ -56,8 +56,7 @@
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-#warning цьому методу тут не місце
-//    [self getHomeTimeline];
+
 }
 
 
@@ -144,11 +143,11 @@
 
 #pragma mark - UITableViewDataSouce methods
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.tweetItems count];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TweetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetTableViewCell"];
     if (!cell) {
         cell = [[TweetTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
@@ -163,13 +162,14 @@
 
 #pragma mark - Delegated methods - UIWebViewDelegate
 
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+-(BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
     NSURL *url = [request URL];
     NSString *urlScheme = [url scheme];
     $l(@"Loading URL: %@", [url absoluteString]);
     
     if ([urlScheme isEqualToString:@"myapprr"]) {
+        [self.logoutOutlet setTitle:@"Log Out" forState:UIControlStateNormal];
         [webView removeFromSuperview];
         
         NSDictionary *d = [self parametersDictionaryFromQueryString:[url query]];
@@ -190,11 +190,11 @@
 
 #pragma mark - Action methods
 
-- (IBAction)loginLogout:(id)sender {
+-(IBAction) loginLogout:(id)sender {
     if ([TwitterAPIManager sharedInstance].isAuthorized) {
         self.tweetItems = nil;
         [self.tableView reloadData];
-        [self.logoutOutlet setTitle:@"Log In"];
+        [self.logoutOutlet setTitle:@"Log In" forState:UIControlStateNormal];
         [[TwitterAPIManager sharedInstance] finishTwitterSession];
     } else {
         [self loginWithWebBrowser];
