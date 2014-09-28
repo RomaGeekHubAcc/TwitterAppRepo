@@ -6,33 +6,53 @@
 //
 //
 
+
+
+#import "TweetTableViewCell.h"
+
 #import "NewTweetViewController.h"
 
-@interface NewTweetViewController ()
+
+@interface NewTweetViewController () <UITableViewDataSource, UITableViewDelegate, UITextViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextView *messageTextView;
+
+@property (nonatomic, strong) NSArray *sentTweets;
 
 @end
 
+
 @implementation NewTweetViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - UITableViewDataSource methods
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.sentTweets count];
 }
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TweetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetTableViewCell"];
+    if (!cell) {
+        cell = [[TweetTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                         reuseIdentifier:@"TweetTableViewCell"];
+    }
+    NSDictionary *tweet = self.sentTweets[indexPath.row];
+    
+    [cell setContentWithDicctionary:tweet];
+    
+    return cell;
+}
+
 
 @end

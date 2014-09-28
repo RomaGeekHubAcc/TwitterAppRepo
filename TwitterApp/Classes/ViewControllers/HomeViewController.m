@@ -33,8 +33,10 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
+    self.logoutOutlet.title = @"Log In";
+    
 #warning перевірка інет-з"єднання..
-    NSString *verifier = [[NSUserDefaults standardUserDefaults] objectForKey:TWITTER_API_OAUTH_SECRET];
+    NSString *verifier = [[NSUserDefaults standardUserDefaults] objectForKey:TWITTER_API_OAUTH_SECRET_KEY];
     if (verifier) {
         [[TwitterAPIManager sharedInstance] onlyAutentificationWithCompletion:^(BOOL success, id responce, NSError *error) {
             if (success) {
@@ -42,6 +44,7 @@
                 [TwitterAPIManager sharedInstance].userName = (NSString *)responce;
 #warning задавати тайтл for UIBarButtonItem
                 self.logoutOutlet.title = @"Log Out";
+                [self getHomeTimeline];
             }
         }];
     } else {
@@ -142,7 +145,7 @@
 #pragma mark - UITableViewDataSouce methods
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.tweetItems.count;
+    return [self.tweetItems count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

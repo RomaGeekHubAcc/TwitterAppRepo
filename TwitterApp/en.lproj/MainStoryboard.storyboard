@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <development version="5100" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -137,12 +138,65 @@
         <scene sceneID="KzU-8u-fbK">
             <objects>
                 <viewController storyboardIdentifier="NewTweetViewController" id="hKq-4T-Avp" customClass="NewTweetViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YDE-CB-FiA">
+                    <view key="view" alpha="0.39999999999999963" contentMode="scaleToFill" id="YDE-CB-FiA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Dej-j1-2HK">
+                                <rect key="frame" x="0.0" y="424" width="320" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NmX-FT-Ycl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="422"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetTableViewCell" rowHeight="86" id="0gH-N6-qZY" customClass="TweetTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0gH-N6-qZY" id="SXn-kR-sSD">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8Bv-VX-UgU">
+                                                    <rect key="frame" x="6" y="6" width="65" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="XJl-ta-71Q">
+                                                    <rect key="frame" x="76" y="5" width="235" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tweet text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WgY-Xc-hQd">
+                                                    <rect key="frame" x="76" y="19" width="235" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="8Bv-VX-UgU" id="ub1-t5-46T"/>
+                                            <outlet property="senderNameLaber" destination="XJl-ta-71Q" id="dNJ-zH-2gr"/>
+                                            <outlet property="tweetTextLabel" destination="WgY-Xc-hQd" id="Cof-Kj-91N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67101470289999998" green="0.96733652420000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bn7-jj-R1P"/>
+                    <connections>
+                        <outlet property="messageTextView" destination="Dej-j1-2HK" id="Srp-0j-P5n"/>
+                        <outlet property="tableView" destination="NmX-FT-Ycl" id="9YH-2d-jem"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afW-Gm-koU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,7 +206,7 @@
         <scene sceneID="vPR-4K-W9w">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7qR-2r-HBi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="nKb-ew-GFS"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_icon.png" id="nKb-ew-GFS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="neP-K9-I2F">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -171,7 +225,7 @@
         <scene sceneID="cdN-gZ-Nt6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="18y-AG-eiS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Write Message" id="rsK-rg-05g"/>
+                    <tabBarItem key="tabBarItem" title="Write Message" image="new_tweet_icon.png" id="rsK-rg-05g"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uFj-XE-Dph">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -187,6 +241,10 @@
             <point key="canvasLocation" x="576" y="473"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home_icon.png" width="25" height="25"/>
+        <image name="new_tweet_icon.png" width="25" height="25"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

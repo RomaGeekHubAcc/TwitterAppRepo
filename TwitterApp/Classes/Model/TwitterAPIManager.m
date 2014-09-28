@@ -16,6 +16,7 @@
 
 @property (nonatomic, strong) STTwitterAPI *twitter;
 
+
 @end
 
 @implementation TwitterAPIManager
@@ -36,8 +37,9 @@
 #pragma mark - Interface Methods
 
 -(void) onlyAutentificationWithCompletion:(CompletionBlock)completion {
-    NSString *oauthToken = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_API_OAUTH_TOKEN];
-    NSString *oauthSecret = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_API_OAUTH_SECRET];;
+    
+    NSString *oauthToken = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_API_OAUTH_TOKEN_KEY];
+    NSString *oauthSecret = [[NSUserDefaults standardUserDefaults] valueForKey:TWITTER_API_OAUTH_SECRET_KEY];;
     
     self.twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:TWITTER_CONSUMER_KEY consumerSecret:TWITTER_CONSUMER_SECRET oauthToken:oauthToken oauthTokenSecret:oauthSecret];
     
@@ -97,9 +99,9 @@
                                        
                                        [[NSUserDefaults standardUserDefaults] setObject:screenName forKey:TWITTER_USER_NAME];
                                        [[NSUserDefaults standardUserDefaults] setObject:oauthToken
-                                                                                 forKey:TWITTER_API_OAUTH_TOKEN];
+                                                                                 forKey:TWITTER_API_OAUTH_TOKEN_KEY];
                                        [[NSUserDefaults standardUserDefaults] setObject:oauthTokenSecret
-                                                                                 forKey:TWITTER_API_OAUTH_SECRET];
+                                                                                 forKey:TWITTER_API_OAUTH_SECRET_KEY];
                                        [[NSUserDefaults standardUserDefaults] synchronize];
                                        
                                        complition(YES, nil, nil);
@@ -108,7 +110,6 @@
                                        complition(NO, nil, error);
                                    }];
 }
-
 
 
 -(void) getHomeTimelineSinceId:(NSString *)sinceId count:(NSUInteger)count completionBlock:(CompletionBlock)complition {
@@ -126,8 +127,8 @@
 
 -(void) finishTwitterSession {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_USER_NAME];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_API_OAUTH_TOKEN];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_API_OAUTH_SECRET];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_API_OAUTH_TOKEN_KEY];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TWITTER_API_OAUTH_SECRET_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
     self.twitter = nil;
     self.userName = nil;
