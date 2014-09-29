@@ -149,9 +149,9 @@
                 displayCoordinates:nil
                           trimUser:nil
                       successBlock:^(NSDictionary *satusses) {
-                          //
+                          complition(YES, satusses, nil);
                       } errorBlock:^(NSError *error) {
-                          
+                          complition(NO, nil, error);
                       }];
 }
 

@@ -6,6 +6,8 @@
 //
 //
 
+static NSString * const textViewPlaceholder = @"New Message";
+
 
 #import "TwitterAPIManager.h"
 #import "TweetTableViewCell.h"
@@ -39,6 +41,7 @@
     self.tableView.delegate = self;
     
     self.messageTextView.delegate = self;
+    [self showPlaceholderForTextView];
 }
 
 -(void) viewWillAppear:(BOOL)animated {
@@ -100,8 +103,29 @@
     return YES;
 }
 
+-(void) textViewDidBeginEditing:(UITextView *)textView {
+    [self hidePlaceholderForTextView];
+}
+
+-(void) textViewDidEndEditing:(UITextView *)theTextView {
+    if (![theTextView hasText]) {
+        [self showPlaceholderForTextView];
+    }
+    
+}
+
 
 #pragma mark - Private methods
+
+-(void) showPlaceholderForTextView {
+    self.messageTextView.textColor = [UIColor lightGrayColor];
+    self.messageTextView.text = textViewPlaceholder;
+}
+
+-(void) hidePlaceholderForTextView {
+    self.messageTextView.text = @"";
+    self.messageTextView.textColor = [UIColor blackColor];
+}
 
 -(void) scrollToBottom {
     if (self.sentTweets.count == 0) {
@@ -121,6 +145,7 @@
                                                           if (success) {
                                                               self.sentTweets = responce;
                                                               [self.tableView reloadData];
+                                                              [self scrollToBottom];
                                                           }
                                                           else {
                                                               $l("--- getUserTimeline error -> %@", error.debugDescription);
@@ -133,9 +158,19 @@
 
 -(IBAction) send:(id)sender {
     NSString *message = self.messageTextView.text;
-    NSString *testMsg = @"test message from my app using STTwitter";
+    if ([message isEqualToString:textViewPlaceholder]) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Відхилено"
+                                                            message:@"Введіть текст повідомлення"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil, nil];
+        [alertView show];
+        
+        return;
+    }
+//    NSString *testMsg = @"test message from my app using STTwitter";
     
-    [[TwitterAPIManager sharedInstance] sendTweet:testMsg
+    [[TwitterAPIManager sharedInstance] sendTweet:message
                               withCompletionBlock:^(BOOL success, id responce, NSError *error) {
                                   if (success) {
                                       [self getUserTimelineWithScreenName:[TwitterAPIManager sharedInstance].userName];
@@ -181,7 +216,7 @@
     // resize the noteView
     CGRect viewFrame = self.view.frame;
     // I'm also subtracting a constant kTabBarHeight because my UIScrollView was offset by the UITabBar so really only the portion of the keyboard that is leftover pass the UITabBar is obscuring my UIScrollView.
-    viewFrame.size.height -= keyboardSize.height;
+    viewFrame.size.height -= keyboardSize.height - 44.0f;
     
     [UIView animateWithDuration:0.3f
                      animations:^{
