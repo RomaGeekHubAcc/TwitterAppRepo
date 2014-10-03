@@ -168,7 +168,6 @@ static NSString * const textViewPlaceholder = @"New Message";
         
         return;
     }
-//    NSString *testMsg = @"test message from my app using STTwitter";
     
     [[TwitterAPIManager sharedInstance] sendTweet:message
                               withCompletionBlock:^(BOOL success, id responce, NSError *error) {
@@ -183,13 +182,10 @@ static NSString * const textViewPlaceholder = @"New Message";
 -(void) keyboardWillHide:(NSNotification *)notification {
     NSDictionary* userInfo = [notification userInfo];
     
-    // get the size of the keyboard
     CGSize keyboardSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
-    
-    // resize the scrollview
     CGRect viewFrame = self.view.frame;
-    viewFrame.size.height += keyboardSize.height;
+    viewFrame.size.height += keyboardSize.height - 46;
     
     [UIView animateWithDuration:0.3f
                      animations:^{
@@ -207,16 +203,14 @@ static NSString * const textViewPlaceholder = @"New Message";
     if (keyboardIsShown) {
         return;
     }
-#error треба пофіксити висоту TextView...
+//#error треба пофіксити висоту TextView...
     NSDictionary* userInfo = [notification userInfo];
     
-    // get the size of the keyboard
     CGSize keyboardSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
-    // resize the noteView
     CGRect viewFrame = self.view.frame;
-    // I'm also subtracting a constant kTabBarHeight because my UIScrollView was offset by the UITabBar so really only the portion of the keyboard that is leftover pass the UITabBar is obscuring my UIScrollView.
-    viewFrame.size.height -= keyboardSize.height - 44.0f;
+    
+    viewFrame.size.height -= keyboardSize.height - 46.0f;
     
     [UIView animateWithDuration:0.3f
                      animations:^{

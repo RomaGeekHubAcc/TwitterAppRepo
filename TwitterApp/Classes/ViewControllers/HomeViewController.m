@@ -42,7 +42,7 @@
             if (success) {
                 [TwitterAPIManager sharedInstance].isAuthorized = YES;
                 [TwitterAPIManager sharedInstance].userName = (NSString *)responce;
-#warning задавати тайтл for UIBarButtonItem
+
                 [self.logoutOutlet setTitle:@"Log Out" forState:UIControlStateNormal];
                 [self getHomeTimeline];
             }
@@ -61,18 +61,6 @@
 
 
 #pragma mark - Private methods
-
-//-(void) oauth {
-//    [[TwitterAPIManager sharedInstance] onlyAutentificationWithCompletion:^(BOOL success, id responce, NSError *error) {
-//        if (success) {
-//            [self getHomeTimeline];
-//            self.logoutOutlet.title = @"Log Out";
-//        }
-//        else {
-//            $l("---oauth error -> %@", [error localizedDescription]);
-//        }
-//    }];
-//}
 
 -(void) loginWithWebBrowser {
     [MBProgressHUD showHUDAddedTo:self.view animated:NO];
@@ -197,6 +185,5 @@
 }
 
 
-//^(BOOL success, id responce, NSError *error)
 
 @end
